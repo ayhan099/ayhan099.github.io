@@ -1,7 +1,108 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Priser - Mrs Pärson Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
-
 <div id="navbar"></div>
+<div class="container my-5">
+    <h1 class="text-center mb-5">Våra Rum & Priser</h1>
+    <p class="text-center mb-5">Upptäck våra konkurrenskraftiga priser och boka din vistelse idag!</p>
 
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100">
+                <img src="klass1.jpg" class="card-img-top"onclick="openImage(this)">
+                <div class="card-body>
+                    <h5>Business Class - Standard Enkelrum</h5>
+                    <p class="text-muted">Perfekt för affärsresenären. Kompakt lyx med arbetsplats.</p>
+                    <h4>1 895 SEK/natt</h4>
+                    <p class="small text-success">✔ Inklusive moms</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100">
+                <img src="klass2.jpg" class="card-img-top"onclick="openImage(this)">
+                <div class="card-body>
+                    <h5>The Strandvägen Experience - Premium Dubbelrum</h5>
+                    <p class="text-muted">Rymligt rum med handplockad inredning och innergårdsutsikt.</p>
+                    <h4>2 650 SEK/natt</h4>
+                    <p class="small text-success">✔ Inklusive moms</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100">
+                <img src="klass3.jpg" class="card-img-top"onclick="openImage(this)">
+                <div class="card-body>
+                    <h5>The Strandvägen Experience Plus - Premium Dubbelrum med sjöutsikt</h5>
+                    <p class="text-muted">Vakna upp till utsikt över Stockholms inlopp.</p>
+                    <h4>3 400 SEK/natt</h4>
+                    <p class="small text-success">✔ Inklusive moms</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-warning">
+                <img src="klass4.jpg" class="card-img-top" onclick="openImage(this)">
+                <div class="card-body">
+                    <h5>Pärson Suite</h5>
+                    <p class="text-muted">55 kvm lyx med vardagsrum och badkar i guld.</p>
+                    <h4>5 900 SEK/natt</h4>
+                    <p class="small text-success">✔ Inklusive moms</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <h2 class ="text-center mt-5 mb-4">Tillval & Guldkant</h2>
+    <div class="card">
+        <div class="card-body">
+            <ul class ="list-group list-group-flush">
+                <li class="list-group-item">
+                    🥐 Grand Breakfast – 245 kr
+                    <br><small class="text-success">Ingår gratis vid bokning via hemsidan</small>
+                </li>
+                <li class="list-group-item">
+                    🍾 Mousserande vin & choklad – 650 kr
+                </li>
+                <li class="list-group-item">
+                    ⏰ Sen utcheckning – 350 kr
+                </li>
+                <li class="list-group-item">
+                    🐶 Hundpaket – 400 kr
+                </li>
+                <li class="list-group-item">
+                    🛏 Extra säng / barnsäng – 500 kr
+                </li>
+            </ul>
+        </div>
+    </div>  
+    <p class ="text-center mt-4 text-muted">
+        Priserna varierar beroende på säsong och efterfrågan.  
+        Se exakt pris för dina datum i vår onlinebokning.
+    </p>
+</div>
+<div id="footer"></div>
 <script src="init.js"></script>
-
+</body>
+</html>
+<div class="modal fade" id="imageModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark">
+      <div class="modal-body text-center">
+        <img id="modalImage" src="" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
