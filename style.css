@@ -194,3 +194,22 @@ body{
     height:200px;
     object-fit:cover;
 }
+
+/* galleri */
+.card{
+    border:none;
+}
+
+.card img{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card img:hover{
+    transform:scale(1.05);
+}
+
+/* tabbar */
+.nav-tabs .nav-link{
+    color:#1e1e1e;
+}
