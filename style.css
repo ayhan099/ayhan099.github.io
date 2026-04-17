@@ -14,7 +14,6 @@ body{
 
 .navbar li {
     margin: 0 20px;
-    
 }
 
 .navbar a {
@@ -33,37 +32,39 @@ body{
     text-align: center;
     background-color: #c1b98f;
 }
+
 .info h2{
     font-size: 20px;
 }
+
 .info p {
     font-size: 18px;
     max-width: 700px;
     margin: auto;
 }
 
-
 .hero {
-    background-image:url("hotel.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color:rgb(255, 106, 0);
-    text-align: center;
+    background: url("hotel.jpg") center/cover no-repeat;
+    height: 90vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
-.hero h2 {
-    font-size: 15px;
-    margin: 10px;
+
+.hero h1 {
+    font-size: 50px;
+    color: rgb(173, 152, 35);
 }
+
 .hero p {
     font-size: 20px;
-}   
+}
 
-/* OM OSS */
 .about{
     padding:30px 20px;
     text-align:center;
@@ -86,13 +87,12 @@ body{
     background-color:#a38921;
     color:white;
     padding:40px 40px;        
-    display:block;   
 }
 
 .footer-top{
-    font-size:20px;   /* mindre text */
+    font-size:20px;
     margin-bottom:10px;
-    text-align:left;  /* vänster istället för center */
+    text-align:left;
 }
 
 .footer-top h2{
@@ -110,13 +110,11 @@ body{
     font-size:14px;
 }
 
-
 .timeline{
     position: relative;
     max-width: 900px;
     margin: auto;
 }
-
 
 .timeline::after{
     content: '';
@@ -177,27 +175,21 @@ body{
     color:#a38921;
 }
 
-.card{
-    transition:0.2s;
-}
-
-.card:hover{
-    transform:scale(1.02);
-}
 .stars{
     color: gold;
     font-size:18px;
     margin-top:5px;
 }
 
-.card-img-top{
-    height:200px;
-    object-fit:cover;
-}
-
-/* galleri */
 .card{
     border:none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition:0.2s;
+}
+
+.card:hover{
+    transform:scale(1.02);
 }
 
 .card img{
@@ -209,7 +201,31 @@ body{
     transform:scale(1.05);
 }
 
-/* tabbar */
+.card-img-top{
+    height:200px;
+    object-fit:cover;
+}
+
 .nav-tabs .nav-link{
     color:#1e1e1e;
+}
+
+button{
+    transition: 0.2s;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+
+.btn-gold {
+    background: rgb(173, 152, 35);
+    color: black;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.btn-gold:hover {
+    background: #d4af37;
 }
