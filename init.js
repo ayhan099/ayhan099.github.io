@@ -27,8 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="footer-bottom">
         <p>© 2026 Mrs Pärson Hotel</p>
         <div class="footer-links">
-            <a href="integritet.html">Integritetspolicy</a>
-            <a href="cookies.html">Cookies</a>
+            <p>📍 Strandvägen 12, Stockholm | 📞08-123 45 67 | ✉ info@parsonhotel.se</p>
         </div>
     </div>
 

@@ -2,99 +2,98 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <title>Priser - Mrs Pärson Hotel</title>
+    <title>Galleri - Mrs Pärson Hotel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<header id="navbar"></header>
 
-<div id="navbar"></div>
-<div class="container my-5">
+<main class="container my-5">
     <h1 class="text-center mb-5">Vår Galleri</h1>
 
-    <ul class="nav nav-tabs justify-content-center mb-4">
-        <li class="nav-item">
-            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#rum">Rum</button>
+    <ul class="nav nav-tabs justify-content-center mb-4" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="rum-tab" data-bs-toggle="tab" data-bs-target="#rum" type="button" role="tab" aria-controls="rum" aria-selected="true">
+                Rum
+            </button>
         </li>
-        <li class="nav-item">
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#mat">Frukost & Gastro</button>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="mat-tab" data-bs-toggle="tab" data-bs-target="#mat" type="button" role="tab" aria-controls="mat" aria-selected="false">
+                Frukost &amp; Gastro
+            </button>
         </li>
-        <li class="nav-item">
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#miljo">Atmosfär</button>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="miljo-tab" data-bs-toggle="tab" data-bs-target="#miljo" type="button" role="tab" aria-controls="miljo" aria-selected="false">
+                Atmosfär
+            </button>
         </li>
     </ul>
 
     <div class="tab-content">
-        <div class="tab-pane fade show active" id="rum">
-    <div class="row g-4">
+        <div class="tab-pane fade show active" id="rum" role="tabpanel" aria-labelledby="rum-tab">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="room1.jpg" class="card-img-top" alt="Rum 1" onclick="openImage(this)">
+                        <div class="card-body">
+                            <p>Vakna till vågornas kluckande mot Strandvägen.</p>
+                            <a href="boka.html" class="btn btn-dark btn-sm">Boka detta rum nu</a>
+                        </div>
+                    </div>
+                </div>
 
-
-        <div class="col-md-6 col-lg-4">
-            <div class="card">
-                <img src="room1.jpg" class="card-img-top" onclick="openImage(this)">
-                <div class="card-body">
-                    <p>Vakna till vågornas kluckande mot Strandvägen.</p>
-                    <a href="boka.html" class="btn btn-dark btn-sm">Boka detta rum nu</a>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="room2.jpg" class="card-img-top" alt="Rum 2" onclick="openImage(this)">
+                        <div class="card-body">
+                            <p>Elegant inredda rum med modern komfort.</p>
+                            <a href="boka.html" class="btn btn-dark btn-sm">Boka detta rum nu</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-            <div class="card">
-                <img src="room2.jpg" class="card-img-top" onclick="openImage(this)">
-                <div class="card-body">
-                    <p>Elegant inredda rum med modern komfort.</p>
-                    <a href="boka.html" class="btn btn-dark btn-sm">Boka detta rum nu</a>
+        <div class="tab-pane fade" id="mat" role="tabpanel" aria-labelledby="mat-tab">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="mat1.jpg" class="card-img-top" alt="Frukost" onclick="openImage(this)">
+                        <div class="card-body">
+                            <p>Starta dagen med vår prisbelönta frukostbuffé.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-    </div>
-</div>
-    
-    <div class="tab-pane fade" id="mat">
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img src="mat1.jpg" class="card-img-top" onclick="openImage(this)">
-                    <div class="card-body">
-                        <p>Starta dagen med vår prisbelönta frukostbuffé.</p>
+        <div class="tab-pane fade" id="miljo" role="tabpanel" aria-labelledby="miljo-tab">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="miljo1.jpg" class="card-img-top" alt="Atmosfär" onclick="openImage(this)">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <div class="tab-pane fade" id="miljo">
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img src="miljo1.jpg" class="card-img-top" onclick="openImage(this)">
-                    <div class="card-body">
-                        <p>Upplev den unika atmosfären i vår historiska byggnad.</p>
-                    </div>
-                </div>
+</main>
+
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-body text-center">
+                <img id="modalImage" class="img-fluid" alt="Förstorad bild">
             </div>
         </div>
     </div>
 </div>
-
-    <div class="modal fade" id="imageModal">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-dark">
-                <div class="modal-body text-center">
-                    <img id="modalImage" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <div id="footer"></div>
+
 <script src="init.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
